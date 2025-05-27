@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hakkımızda | Garanti BBVA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffffff, #95ceff);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-card {
+      background-color: #f7f7f7f5;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 77, 0, 0.1);
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .info-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .info-card:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 77, 0, 0.25);
+      cursor: pointer;
+      background-color: #d6e6d6;
+    }
+
+    .info-card i {
+      font-size: 40px;
+      color: #006400;
+      margin-bottom: 15px;
+      transition: filter 0.5s ease;
+      animation: iconGlow 3s infinite alternate ease-in-out;
+      filter: drop-shadow(0 0 3px #338833);
+      display: inline-block;
+    }
+
+    @keyframes iconGlow {
+      0% {
+        filter: drop-shadow(0 0 3px #338833);
+        transform: rotate(0deg);
+      }
+
+      50% {
+        filter: drop-shadow(0 0 10px #55aa55);
+        transform: rotate(5deg);
+      }
+
+      100% {
+        filter: drop-shadow(0 0 3px #338833);
+        transform: rotate(0deg);
+      }
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #004d00;
+      text-shadow: 1px 1px 3px #a3c1a3;
+      text-align: center;
+    }
+
+    h4 {
+      color: #005900;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      transition: color 0.3s ease;
+    }
+
+    .info-card:hover h4 {
+      color: #007700;
+    }
+
+    p {
+      color: #2b4d2b;
+      font-size: 1rem;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+    }
+
+    .info-card:hover p {
+      color: #1b2f1b;
+    }
+
+    footer {
+      background-color: #004480;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1072d4e1">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"></a>
+      <img src="https://www.garantibbva.com.tr/content/experience-fragments/public-website/tr/site/header/master1/_jcr_content/root/header/headerdesktop/image.coreimg.svg/1699885476212/logo.svg" alt="">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link active" href="hakkimizda.html">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetler</a></li>
+          <li class="nav-item"><a class="nav-link" href="urunler.html">Ürünler</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h2>Hakkımızda</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="info-card">
+          <i class="fas fa-landmark"></i>
+          <h4>Yatırımcı İlişkileri</h4>
+          <p>1946 yılında Ankara’da kurulan Garanti BBVA, 953 milyar TL aktif büyüklüğü ile Türkiye'nin en büyük ikinci özel bankasıdır.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card">
+          <i class="fas fa-bullhorn"></i>
+          <h4>Garanti BBVA'dan Haberler</h4>
+          <p>Gelişmeler, yenilikler, ödüllerimiz ve sunduğumuz hizmetlerle ilgili tüm haberlere buradan ulaşabilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card">
+          <i class="fas fa-bullseye"></i>
+          <h4>Amacımız</h4>
+          <p>Amacımız, çağın olanaklarını herkese sunmak. Stratejimizin temelini erişilebilirlik ve sürdürülebilirlik oluşturur.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card">
+          <i class="fas fa-history"></i>
+          <h4>Tarihçe</h4>
+          <p>Garanti BBVA tüm bankacılık alanlarında faaliyet göstermektedir: bireysel, kurumsal, yatırım ve daha fazlası.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card">
+          <i class="fab fa-instagram"></i>
+          <h4>Sosyal Medyada Garanti</h4>
+          <p>Ürün ve kampanyalarımızı sosyal medya sayfalarımızdan takip ederek güncel kalabilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card">
+          <i class="fas fa-building"></i>
+          <h4>Gayrimenkuller</h4>
+          <p>Bankamız tarafından satışa sunulan tüm gayrimenkulleri bu bölümden kolaylıkla inceleyebilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="info-card">
+          <i class="fas fa-phone"></i>
+          <h4>İletişim Bilgileri</h4>
+          <p>İletişim kanallarımız üzerinden bize her zaman ulaşabilir, detaylı bilgi alabilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Şube ve ATM</h4>
+          <p>Türkiye'nin her yerinde size en yakın Garanti BBVA şube veya ATM'sini kolayca bulun.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Garanti Bankası. Tüm hakları saklıdır.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".info-card");
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

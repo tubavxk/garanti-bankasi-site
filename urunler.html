@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ürünler | Garanti Bankası</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      background: linear-gradient(135deg, #ffffff, #95ceff);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .custom-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      padding: 60px 20px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .titles {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .titles h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #176f35;
+      animation: pulseScale 2s ease-in-out infinite;
+      line-height: 1.2;
+    }
+
+    .titles h2 span {
+      display: block;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #4caf50;
+      margin-top: 6px;
+    }
+
+    .titles h2:nth-child(1) { animation-delay: 0s; }
+    .titles h2:nth-child(2) { animation-delay: 0.7s; }
+    .titles h2:nth-child(3) { animation-delay: 1.4s; }
+
+    @keyframes pulseScale {
+      0%, 100% { transform: scale(1); color: #176f35; }
+      50% { transform: scale(1.1); color: #4caf50; }
+    }
+
+    .cards-wrapper {
+      flex: 2 1 600px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 40px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #4caf5077 0%, #2196f3aa 100%);
+      border-radius: 20px;
+      color: white;
+      box-shadow: 0 12px 20px rgba(33, 150, 243, 0.3);
+      padding: 25px 30px 40px 30px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 35px rgba(33, 150, 243, 0.6);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .card-icon {
+      width: 55px;
+      height: 55px;
+      background: #176f35;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 10px #0d4f23;
+      flex-shrink: 0;
+    }
+
+    .card-icon img {
+      width: 30px;
+      filter: brightness(0) invert(1);
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .card-desc {
+      margin-top: 12px;
+      font-size: 1rem;
+      color: #d9f7d9cc;
+    }
+
+    .btn-detail {
+      background: #2196f3;
+      padding: 10px 24px;
+      border-radius: 40px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      border: none;
+      margin-top: 12px;
+    }
+
+    .btn-detail:hover {
+      background: #1769aa;
+    }
+
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .card::before {
+      width: 150px;
+      height: 150px;
+      background: rgba(33, 150, 243, 0.15);
+      top: -50px;
+      right: -50px;
+      animation: pulse 5s infinite ease-in-out;
+    }
+
+    .card::after {
+      width: 120px;
+      height: 120px;
+      background: rgba(76, 175, 80, 0.15);
+      bottom: -40px;
+      left: -40px;
+      animation: pulse 7s infinite ease-in-out alternate;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.2); opacity: 0.5; }
+    }
+
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1072d4e1;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"></a>
+      <img src="https://www.garantibbva.com.tr/content/experience-fragments/public-website/tr/site/header/master1/_jcr_content/root/header/headerdesktop/image.coreimg.svg/1699885476212/logo.svg" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetler</a></li>
+          <li class="nav-item"><a class="nav-link active" href="urunler.html">Ürünler</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="custom-container">
+    <div class="titles">
+      <h2>Kredi Kartları <span>Bonus özellikli kredi kartlarımızla harcayın, kazanın.</span></h2>
+      <h2>İhtiyaç Kredisi <span>Düşük faiz oranlarıyla hızlı kredi fırsatları.</span></h2>
+      <h2>Vadeli Mevduat <span>Paranızı değerinde değerlendirin, yüksek faiz kazanın.</span></h2>
+    </div>
+
+    <div class="cards-wrapper">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2910/2910761.png"></div>
+          <h3 class="card-title">Bonus Platinum</h3>
+        </div>
+        <p class="card-desc">17.000 TL’ye varan bonus fırsatıyla alışveriş yapın.</p>
+        <button class="btn-detail">Detaylı Bilgi</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006733.png"></div>
+          <h3 class="card-title">Biyometrik Kart</h3>
+        </div>
+        <p class="card-desc">Parmak izi ile güvenli ve hızlı alışverişin keyfini çıkarın.</p>
+        <button class="btn-detail">Detaylı Bilgi</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/4769/4769401.png"></div>
+          <h3 class="card-title">Dinamik Kart</h3>
+        </div>
+        <p class="card-desc">Değişken güvenlik kodu ile ek koruma sağlayın.</p>
+        <button class="btn-detail">Detaylı Bilgi</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2331/2331930.png"></div>
+          <h3 class="card-title">Miles&Smiles</h3>
+        </div>
+        <p class="card-desc">Uçuş avantajları ve kampanyalar bir arada.</p>
+        <button class="btn-detail">Detaylı Bilgi</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/1965/1965671.png"></div>
+          <h3 class="card-title">Maximum Kart</h3>
+        </div>
+        <p class="card-desc">Taksitli alışveriş ve kampanya fırsatlarını yakalayın.</p>
+        <button class="btn-detail">Detaylı Bilgi</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006751.png"></div>
+          <h3 class="card-title">Axess</h3>
+        </div>
+        <p class="card-desc">Kazandığınız puanlarla harcamalarınıza yön verin.</p>
+        <button class="btn-detail">Detaylı Bilgi</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-white text-center py-3" style="background-color: #004480;">
+    &copy; 2025 Garanti Bankası. Tüm hakları saklıdır.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
